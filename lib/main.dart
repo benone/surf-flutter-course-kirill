@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +16,17 @@ class MyApp extends StatelessWidget {
           MyFirstWidget(),
           MyFirstStatefulWidget(),
         ]));
+  }
+}
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Column(children: [
+      MyFirstWidget(title: "Тест"),
+      MyFirstStatefulWidget(),
+    ]));
   }
 }
 
@@ -68,6 +79,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
 class MyFirstWidget extends StatelessWidget {
   int buildCount = 0;
+  String title = "Тестовый виджет";
+
+  MyFirstWidget({this.title});
+
+  // String func() {
+  //   return context.runtimeType.toString();
+  // }
+
   @override
   Widget build(BuildContext context) {
     buildCount += 1;
@@ -87,13 +106,18 @@ class MyFirstStatefulWidget extends StatefulWidget {
 
 class _MyFirstStatefulWidgetState extends State<MyFirstStatefulWidget> {
   int buildCount = 0;
+
+  String func() {
+    return context.runtimeType.toString();
+  }
+
   @override
   Widget build(BuildContext context) {
     buildCount += 1;
-    print("buildCount: ${buildCount}");
+    print("buildCount: ${this.buildCount}");
     return Container(
       child: Center(
-        child: Text("Hello!"),
+        child: Text("Hello! ${this.func()}"),
       ),
     );
   }
