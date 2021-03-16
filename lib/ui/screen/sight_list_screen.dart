@@ -10,14 +10,40 @@ class _SightListScreenState extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("hello"),
+        title: AppBarText(),
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        elevation: 0,
+        toolbarHeight: 120,
       ),
+      resizeToAvoidBottomInset: false,
       body: Container(),
-      // bottomNavigationBar: BottomNavigationBar(items: [
-      //   BottomNavigationBarItem(label: "Alarm", icon: Icon(Icons.access_alarm)),
-      //   BottomNavigationBarItem(
-      //       label: "Phone", icon: Icon(Icons.phone_android)),
-      // ]),
+    );
+  }
+}
+
+class AppBarText extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 50.0),
+      child: Container(
+          alignment: Alignment.centerLeft,
+          child: RichText(
+            text: TextSpan(
+              style: TextStyle(
+                  color: Color.fromRGBO(23, 24, 35, 1),
+                  fontSize: 32.0,
+                  // height: 1,
+                  fontFamily: "RobotoMono-Regular",
+                  fontWeight: FontWeight.w700),
+              children: [
+                TextSpan(text: "С", style: TextStyle(color: Colors.green)),
+                TextSpan(text: "писок\n"),
+                TextSpan(text: "и", style: TextStyle(color: Colors.yellow)),
+                TextSpan(text: "нтересных мест")
+              ],
+            ),
+          )),
     );
   }
 }
