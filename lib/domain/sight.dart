@@ -6,6 +6,7 @@ class Sight {
   double lon;
   String url;
   String details;
+  String longDetails;
   SightTypes type;
 
   Sight({
