@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:places/mocks.dart' as mocks;
+import 'package:places/ui/screen/sight_card.dart';
 
 class SightListScreen extends StatefulWidget {
   @override
@@ -16,7 +18,16 @@ class _SightListScreenState extends State<SightListScreen> {
         toolbarHeight: 120,
       ),
       resizeToAvoidBottomInset: false,
-      body: Container(),
+      body: Container(
+          padding: EdgeInsets.only(top: 30),
+          child: SingleChildScrollView(
+            child: Column(
+                children: mocks.sights
+                    .map((e) => SightCard(
+                          sight: e,
+                        ))
+                    .toList()),
+          )),
     );
   }
 }

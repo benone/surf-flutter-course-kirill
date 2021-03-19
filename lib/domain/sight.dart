@@ -1,7 +1,4 @@
-enum SightTypes {
-  sight,
-  cafe,
-}
+enum SightTypes { sight, cafe, store, coworking }
 
 class Sight {
   String name;
