@@ -17,6 +17,10 @@ class SightCard extends StatelessWidget {
                 color: Colors.blueGrey,
                 width: 328,
                 height: 96,
+                child: Image.asset(
+                  this.sight.imagePath,
+                  fit: BoxFit.fitWidth,
+                ),
               ),
               Positioned(
                 child: Text(
@@ -30,7 +34,10 @@ class SightCard extends StatelessWidget {
                 top: 10,
               ),
               Positioned(
-                child: Icon(Icons.favorite),
+                child: Icon(
+                  Icons.favorite,
+                  color: Colors.red[400],
+                ),
                 top: 10,
                 right: 20,
               )

@@ -9,10 +9,20 @@ class SightDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
-        width: double.infinity,
-        height: 360,
-        color: Colors.blueGrey,
-      ),
+          width: double.infinity,
+          height: 360,
+          color: Colors.blueGrey,
+          child: Image.network(
+            this.sight.imageUrl,
+            fit: BoxFit.cover,
+            loadingBuilder: (BuildContext context, Widget child,
+                ImageChunkEvent loadingProgress) {
+              if (loadingProgress == null) return child;
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            },
+          )),
       Align(
           alignment: Alignment.topLeft,
           child: Padding(
