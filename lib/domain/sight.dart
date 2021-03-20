@@ -7,7 +7,9 @@ class Sight {
   String url;
   String details;
   String longDetails;
+  String imagePath;
   SightTypes type;
+  String imageUrl;
 
   Sight({
     this.name,
@@ -15,6 +17,9 @@ class Sight {
     this.lon,
     this.url,
     this.details,
+    this.imagePath,
+    this.longDetails,
     this.type,
+    this.imageUrl,
   });
 }

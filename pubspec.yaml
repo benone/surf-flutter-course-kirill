@@ -21,8 +21,9 @@ flutter:
   uses-material-design: true
 
 
-  # assets:
-  #   - res/images/*
+  assets:
+    - res/images/
+
 
   fonts:
     - family: RobotoMono

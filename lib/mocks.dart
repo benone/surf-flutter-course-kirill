@@ -7,6 +7,9 @@ final List sights = [
     lat: 55.6,
     lon: 56.6,
     url: "https://google.com",
+    imagePath: "res/images/rs.jpg",
+    imageUrl:
+        "https://russiafaq.info/wp-content/uploads/2020/04/s1200-1-1-768x510.jpg",
     type: SightTypes.sight,
   ),
   Sight(
@@ -15,6 +18,7 @@ final List sights = [
     lat: 55.6,
     lon: 56.6,
     url: "https://yandex.ru",
+    imagePath: "res/images/cafe_rom.jpg",
     type: SightTypes.cafe,
   ),
   Sight(
@@ -23,6 +27,7 @@ final List sights = [
     lat: 55.6,
     lon: 56.6,
     url: "https://ikea.ru",
+    imagePath: "res/images/ikea.jpg",
     type: SightTypes.store,
   ),
   Sight(
@@ -31,6 +36,7 @@ final List sights = [
     lat: 55.6,
     lon: 56.6,
     url: "https://ikea.ru",
+    imagePath: "res/images/coworking.jpg",
     type: SightTypes.coworking,
   ),
 ];
