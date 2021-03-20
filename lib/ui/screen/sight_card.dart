@@ -13,10 +13,13 @@ class SightCard extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Container(
-                color: Colors.blueGrey,
-                width: 328,
-                height: 96,
+              AspectRatio(
+                aspectRatio: 3 / 2,
+                child: Container(
+                  color: Colors.blueGrey,
+                  width: 328,
+                  height: 96,
+                ),
               ),
               Positioned(
                 child: Text(
@@ -43,17 +46,22 @@ class SightCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  child: Text(
-                    this.sight.name,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16),
-                  ),
-                  padding:
-                      EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 2),
-                ),
+                SizedBox(height: 16),
+                ConstrainedBox(
+                    constraints: BoxConstraints(
+                      maxWidth: 164,
+                    ),
+                    child: Padding(
+                      child: Text(
+                        this.sight.name,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16),
+                      ),
+                      padding: EdgeInsets.only(
+                          left: 16, top: 0, right: 16, bottom: 2),
+                    )),
                 Padding(
                   child: Text(
                     this.sight.details,

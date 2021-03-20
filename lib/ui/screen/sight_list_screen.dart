@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/mocks.dart' as mocks;
 import 'package:places/ui/screen/sight_card.dart';
+import 'package:places/ui/widget/my_app_bar.dart';
 
 class SightListScreen extends StatefulWidget {
   @override
@@ -11,10 +12,9 @@ class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: MyAppBar(
         title: AppBarText(),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        elevation: 0,
         toolbarHeight: 120,
       ),
       resizeToAvoidBottomInset: false,

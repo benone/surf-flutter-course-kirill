@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: SightListScreen(),
-      home: Scaffold(
-        body: SightDetails(sight: mocks.sights[0]),
-      ),
+      home: SightListScreen(),
+      // home: Scaffold(
+      //   body: SightDetails(sight: mocks.sights[0]),
+      // ),
     );
   }
 }
