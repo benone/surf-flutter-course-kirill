@@ -11,7 +11,7 @@ final List sights = [
   ),
   Sight(
     name: "Кафе Ромашка",
-    details: "Ланч за 500 рублей",
+    details: "Ланч за 500 рублей. Только по будням",
     lat: 55.6,
     lon: 56.6,
     url: "https://yandex.ru",
@@ -19,7 +19,7 @@ final List sights = [
   ),
   Sight(
     name: "IKEA Химки",
-    details: "Распродажа",
+    details: "Распродажа до конца следющего года!",
     lat: 55.6,
     lon: 56.6,
     url: "https://ikea.ru",
